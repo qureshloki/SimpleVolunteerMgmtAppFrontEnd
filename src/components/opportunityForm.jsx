@@ -237,7 +237,7 @@ class OpportunityForm extends Form {
 
   renderActions() {
     const { isEdit, user } = this.state;
-    const { isStaff } = user;
+    const isStaff = user && user.isStaff;
     return (
       <div className="btn-group">
         {isEdit && this.renderSubmit("save", "Save")}
