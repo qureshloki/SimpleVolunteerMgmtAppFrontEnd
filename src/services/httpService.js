@@ -5,8 +5,7 @@ import { toast } from "react-toastify";
 const authHeader = "x-auth-token";
 
 //set the base url
-axios.defaults.baseURL =
-  process.env.REACT_APP_API_URL || "http://localhost:3900/api";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 //add response interceptor to log unexpected error
 axios.interceptors.response.use(null, error => {
