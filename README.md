@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Description:
 
-## Available Scripts
+This is the ReactJs UI for a simple mobile responsive web application to create and search for volunteering opportunities.
 
-In the project directory, you can run:
+This was coded as part of an interview assignment.
 
-### `npm start`
+#### Given Requirements:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Build a simple mobile responsive web app that allows the user to do the following:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. Create a volunteering opportunity. Suggested fields: email, opportunity title, opportunity
+   description, location (includes city-area/address), day/time (from-to/specific day, no. of
+   hours/day)
+2. Discover volunteering opportunities in the most intuitive way.
+3. [Bonus] Sign up for a particular opportunity they’re interested in. Suggested fields: Email,
+   Mobile, Time commitment, a short note about why they want to volunteer and/or any
+   previous volunteering experience.
+4. [Bonus] Get an email if any user signs up for an opportunity created by him/her, which
+   includes all details filled by the volunteering candidate.
 
-### `npm test`
+#### Deployment:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm run build`
+2. Make sure backend app is deployed and running (Refer the ql_volunteer_app_be repository).
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Before building/running the app, set the environment variables.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+   1. REACT_APP_API_URL must be set to the backend app api's url.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Note: You can set environment variables directly in the shell or edit src/.env.production or src/.env.development files & set the REACT_APP_API_URL variable there.
 
-### `npm run eject`
+4. Build/run the app using "npm run build"/"npm start" in the application root folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Access the app at http://localhost:3000 or whatever port it was started on.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. An admin/staff user has been created in the mongo db database with credentials: "username" : "staff", "password" : "staff"
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+7. Heroku Deployment Url: https://ql-simple-volunteer-mgmt-fe.herokuapp.com/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Implementation:
 
-## Learn More
+The following functionality is implemented:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. View and search volunteering opportunities based on certain criteria.
+2. Sort opportunities along with pagination.
+3. Apply for opportunities (not fully functional).
+4. Staff can login (Only single staff user has been added to database)
+5. Staff can create volunteering opportunities.
+6. Staff can edit and delete volunteering opportunities.
+7. Staff can search volunteering opportunities using extra criteria "email", so that a certain staff can find all opportunities created by him/her.
